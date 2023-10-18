@@ -8,7 +8,10 @@ import java.util.List;
  * from a list.
  */
 public class ListDeduplicator implements GenericListDeduplicator {
-
+    private final GenericListSorter sorter;
+    public ListDeduplicator(GenericListSorter sorter) {
+        this.sorter = sorter;
+    }
     /**
      * Removes duplicate numbers from a list.
      * @return A list having the same numbers as the original
